@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Self-Report Survey Crime Map</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+    <link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+type="text/css"
+/>
+  </head>
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h2 class="my-0 mr-md-auto font-weight-bold"><a href="/" class="text-dark title">Self-Report Survey Crime Map</a></h2>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="./add.html">Add Report</a>
+        <a class="p-2 text-dark" href="/api/v1/reports" target="_blank">API</a>
+      </nav>
+    </div>
+
+
+    <div class="container my-3">
+      <h3>What is a Self-Report Survey?</h3>
+      <section class="about" role="about">
+        <p>In sociology, self-report surveys are a type of survey where you can repond free from interference from researchers. Use the map below to publish instances of crime where you live so that these instances can be documented and help others avoid future victimization.</p>
+        <p>I have also added navigation features so that you can choose safer routes, based on the information collected to date.</p>
+
+        <ul>
+          <li>To add a report, click the "Add Report" button.</li>
+          <li>To learn more about the FBI's Uniform Crime Reporting Program, as well as the definitions for each crime recorded by this mapping application, click the "What is the UCR?" button (opens in new window).</li>
+          <li>To view more public safety applications, click on the link to my website in the footer.</li>
+          <li>You can share this website on Facebook, Twitter, or by email by clicking the links below.</li>
+        </ul>
+      </section>
+
+      <div class="form-row">
+        <!-- <div class="col">
+          <a href="add.html" class="btn btn-success btn-block">Add Report</a>
+        </div> -->
+        <div class="col">
+          <a href="https://ucr.fbi.gov/crime-in-the-u.s/2011/crime-in-the-u.s.-2011/offense-definitions" target="_blank" class="btn btn-info btn-block">What is the UCR?</a>
+        </div>
+        <div class="col">
+          <div class="form-row">
+            <div class="col">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//selfreportmap.herokuapp.com/" class="btn btn-primary btn-block" id="btn-facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://twitter.com/intent/tweet?text=Publish/view%20self-report%20survey%20crime%20incidents%3A%20https%3A//selfreportmap.herokuapp.com/" id="btn-twitter" class="btn btn-block" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a id="btn-email" class="btn btn-default btn-block" href="mailto:?subject=Publish/view self-report survey crime incidents&amp;body=Check out this site https://selfreportmap.herokuapp.com/" target="_blank">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a id="btn-reddit" class="btn btn-block" href="http://www.reddit.com/submit?url=https://selfreportmap.herokuapp.com&title=Publish/view%20self-report%20survey%20crime%20incidents" target="_blank">
+                <i class="fab fa-reddit-alien"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="map"
+        style="width: 100%; height: 500px;border-radius: 5px;"
+      ></div>
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-center text-muted">&copy; 2019 - Developed by <a href="https://richardludwig.com" target="_blank">Richard Ludwig</a>.</p>
+      </div>
+    </footer>
+
+    <script src="js/map.js"></script>
+  </body>
+</html>
